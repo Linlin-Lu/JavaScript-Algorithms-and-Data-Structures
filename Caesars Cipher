@@ -1,0 +1,16 @@
+function rot13(str) {
+   let result = "";  
+  for (let i = 0; i < str.length; i++) {
+    if (str.charCodeAt(i) >= "A".charCodeAt() && str.charCodeAt(i) <= "Z".charCodeAt()) {
+     let newCode =  str.charCodeAt(i) + 13 > "Z".charCodeAt() ? str.charCodeAt(i) - 13 : str.charCodeAt(i) + 13;
+     result += String.fromCharCode(newCode);
+    } else {
+      result += str[i];
+    }
+  }
+return result
+
+
+}
+
+rot13("SERR PBQR PNZC");
